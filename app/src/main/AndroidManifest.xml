@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BrunoAtividadeIIAPIIBIMII">
         <activity
+            android:name=".view.UsuarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>

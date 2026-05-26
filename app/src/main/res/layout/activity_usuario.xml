@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Entrar"
-        android:backgroundTint="#4C7EAF"
+        android:backgroundTint="#4C6DAF"
         android:textColor="#FFFFFF"
         android:padding="12dp"/>
 
