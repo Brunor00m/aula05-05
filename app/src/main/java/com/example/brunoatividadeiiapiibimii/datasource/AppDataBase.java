@@ -1,5 +1,6 @@
 package com.example.brunoatividadeiiapiibimii.datasource;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -30,6 +31,11 @@ public class AppDataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         Log.i(AppUtil.TAG,"Criando a tabela"+ ClienteDataModel.TABELA);
         db.execSQL(ClienteDataModel.criarTabela());
+    }
+    public boolean insert(String tabela, ContentValues dados){
+        db=getWritableDatabase();
+        boolean retorno = false;
+        return  db.insert(tabela, null, dados)>0;
     }
 
 }
