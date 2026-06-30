@@ -16,6 +16,13 @@ public class AppDataBase extends SQLiteOpenHelper {
     public static final String NAME = "etim.db";
     public static int version = 2;
 
+    public boolean update(String tabela, ContentValues dados, String whereClause, String[] whereArgs){
+
+        db = getWritableDatabase();
+
+        return db.update(tabela, dados, whereClause, whereArgs) > 0;
+
+    }
     SQLiteDatabase db;
     public AppDataBase(Context context) {
         super(context, NAME, null, version);
